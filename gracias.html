@@ -15,7 +15,7 @@
     body {
       background-color: #f8f9fa;
     }
-    /* Navbar- */
+    /* Navbar */
     .navbar {
       background-color: #000000;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -88,11 +88,17 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-image: url('images/thank-you-bg.avif');
       background-size: cover;
       background-position: center;
       filter: brightness(0.6);
       color: #ffffff;
+    }
+
+    @supports not (background-image: url('images/thank-you-bg.avif')) {
+      .thank-you-section {
+        background-image: url('images/thank-you-bg.jpg');
+      }
     }
     .thank-you-content {
       position: relative;
