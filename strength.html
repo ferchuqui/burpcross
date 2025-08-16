@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strength - Burp⚡Cross</title>
+  <!-- ...existing code... -->
+  <!-- Favicon emoji ⚡ -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text y='50%' x='50%' text-anchor='middle' dominant-baseline='central' font-size='48'>⚡</text></svg>">
+<!-- ...existing code... -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Google Fonts (Anton) -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos de redes sociales y WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #000000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+    .navbar.scrolled {
+      background-color: #d32f2f;
+    }
+    .navbar-brand {
+      font-family: 'Anton', sans-serif;
+      font-size: 1.8rem;
+      color: #ffffff !important;
+      text-transform: uppercase;
+    }
+    .navbar-nav {
+      gap: 2rem;
+    }
+    .nav-link {
+      color: #ffffff;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #d32f2f;
+    }
+    .dropdown-menu {
+      background-color: #000000;
+      border: 1px solid #d32f2f;
+    }
+    .dropdown-item {
+      color: #ffffff;
+      font-family: 'Anton', sans-serif;
+    }
+    .dropdown-item:hover {
+      background-color: #d32f2f;
+      color: #ffffff;
+    }
+    .btn-login {
+      background-color: #d32f2f;
+      color: #ffffff;
+      border: none;
+      padding: 8px 20px;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.1rem;
+    }
+    .btn-login:hover {
+      background-color: #b71c1c;
+    }
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background-color: #000000;
+        padding: 10px;
+      }
+      .nav-link {
+        color: #ffffff;
+      }
+      .navbar-nav {
+        gap: 0.5rem;
+      }
+    }
+    /* Strength Section */
+    .strength-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.6);
+      color: #ffffff;
+    }
+    .strength-content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .strength-section h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+    }
+    .strength-section p {
+      font-family: Arial, sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .btn-home {
+      background-color: #d32f2f;
+      color: #ffffff;
+      font-family: 'Anton', sans-serif;
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-home:hover {
+      background-color: #b71c1c;
+    }
+    @media (max-width: 768px) {
+      .strength-section h1 {
+        font-size: 2rem;
+      }
+      .strength-section p {
+        font-size: 1rem;
+      }
+      .btn-home {
+        font-size: 1rem;
+        padding: 8px 20px;
+      }
+    }
+    /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-btn i {
+      font-size: 2rem;
+    }
+    /* Footer */
+    .footer {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer h3 {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .footer p {
+      font-family: Arial, sans-serif;
+      margin: 5px 0;
+    }
+    .footer .social-links a {
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    .footer .social-links a:hover {
+      color: #d32f2f;
+    }
+    .footer .copyright {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+    }
+    .footer .copyright a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer .copyright a:hover {
+      color: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#hero">Burp⚡Cross</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="planes.html">Planes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="clasesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Clases
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="clasesDropdown">
+              <li><a class="dropdown-item" href="wod.html">WOD</a></li>
+              <li><a class="dropdown-item" href="strength.html">Strength</a></li>
+              <li><a class="dropdown-item" href="mobility.html">Mobility</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-login ms-lg-3" href="index.html#login">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Strength Section -->
+  <section class="strength-section">
+    <div class="strength-content">
+      <h1>Strength - Fuerza</h1>
+      <p>Desarrolla tu fuerza máxima con levantamientos de pesas y ejercicios específicos. Nuestras clases de Strength te ayudarán a construir un cuerpo más fuerte y resistente.</p>
+      <a href="index.html#hero" class="btn btn-home">Volver al Inicio</a>
+    </div>
+  </section>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/+5491112345678?text=¡Hola!%20Quiero%20información%20sobre%20Burp⚡Cross" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>Burp⚡Cross</h3>
+    <p>Calle Regules 113, Paso del Rey, Buenos Aires, Argentina</p>
+    <p>Teléfono: +54 9 11 1234-5678</p>
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; Luis Fernando Farji - <a href="https://www.tuimprenta.com.ar" target="_blank">www.tuimprenta.com.ar</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS y Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <!-- JavaScript para efecto de scroll en la navbar -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
