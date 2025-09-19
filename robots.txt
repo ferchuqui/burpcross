@@ -1,0 +1,23 @@
+# robots.txt de Burpcross — permitir a TODOS los bots (incluidos sociales)
+
+User-agent: *
+Allow: /
+
+# Bots sociales (por si algún filtro respeta bloques por UA)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# (Opcional) agrega tu sitemap cuando lo tengas:
+# Sitemap: https://burpcross.com.ar/sitemap.xml
