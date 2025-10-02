@@ -29,13 +29,24 @@
 <style>
     body { background-color: #f8f9fa; }
     .hero-section { position: relative; width: 100%; height: 100vh; overflow: hidden; }
-    .carousel-item img { width: 100%; height: 100vh; object-fit: cover; filter: brightness(0.9); }
-    .coming-soon-overlay {
-      position: absolute; top:0; left:0; width:100%; height:100%;
-      background-color: rgba(0,0,0,0.5);
-      display:flex; flex-direction:column; justify-content:center; align-items:center;
-      text-align:center; color:#fff;
-    }
+    .carousel-item img { 
+  width: 100%; 
+  height: 100vh; 
+  object-fit: cover; 
+  /* filter: brightness(0.9); */ /* ← eliminar */
+}
+
+.coming-soon-overlay {
+  position: absolute;
+  bottom: 40px;   /* la bajás un poco, ajustá el valor */
+  right: 40px;    /* la corrés a la derecha */
+  width: 30%;     /* ajustá el tamaño */
+  background-color: rgba(0,0,0,0.5); /* opcional */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+}
     .coming-soon-overlay h1 { font-family:'Anton',sans-serif; font-size:3rem; }
     .primavera-section {
       position: relative;
@@ -54,7 +65,7 @@
   animation: fall linear infinite;
   opacity: 0.9;
 }
-
+.falling-flowers, .flower { display: none !important; }
 @keyframes fall {
   0% { top: -10%; transform: rotate(0deg); } /* Empieza arriba */
   100% { top: 110%; transform: rotate(360deg); } /* Cae por completo */
@@ -139,14 +150,16 @@
 </script>
   <!-- Hero -->
 <section class="hero-section">
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
       <div class="carousel-inner">
-        <div class="carousel-item active"><img src="images/frente.jpg" alt="Fachada del gimnasio BurpCross en Paso del Rey"></div>
-        <div class="carousel-item"><img src="images/local.jpeg" alt="Interior del gimnasio BurpCross con equipamiento de CrossFit"></div>
+        <div class="carousel-item active"><img src="images/hero6.jpeg" alt="Fachada del gimnasio BurpCross en Paso del Rey"></div>
+        <!-- <div class="carousel-item"><img src="images/local.jpeg" alt="Interior del gimnasio BurpCross con equipamiento de CrossFit"></div> -->
+        <div class="carousel-item"><img src="images/rcp.jpeg" alt="Interior del gimnasio BurpCross con equipamiento de CrossFit"></div>
         <div class="carousel-item"><img src="images/hero3.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div>
-        <div class="carousel-item"><img src="images/hero6.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div>
+        <!-- <div class="carousel-item"><img src="images/hero6.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div> -->
         <div class="carousel-item"><img src="images/hero7.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div>
-        <div class="carousel-item"><img src="images/hero8.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div>
+        <div class="carousel-item"><img src="images/foto9.jpeg" alt="Clase de entrenamiento funcional en BurpCross"></div>
+        <div class="carousel-item"><img src="images/foto10.jpeg" alt="Gimnasio BurpCross"></div>
       </div>
     </div>
     <div class="coming-soon-overlay">
@@ -161,9 +174,9 @@
     <h2 class="primavera-title">🌸 ¡Feliz Día de la Primavera! 🌼</h2>
     <p class="primavera-text">Que la alegría, la energía y las flores llenen cada entrenamiento 🌺💪</p>
     <div class="row g-4 justify-content-center">
-      <div class="col-md-4"><img src="images/foto1.jpg" class="img-fluid rounded shadow" alt="Primavera 1"></div>
+      <div class="col-md-4"><img src="images/hero8.jpeg" class="img-fluid rounded shadow" alt="Primavera 1"></div>
       <div class="col-md-4"><img src="images/foto3.jpeg" class="img-fluid rounded shadow" alt="Primavera 2"></div>
-      <div class="col-md-4"><img src="images/foto5.jpeg" class="img-fluid rounded shadow" alt="Primavera 3"></div>
+      <div class="col-md-4"><img src="images/foto11.jpeg" class="img-fluid rounded shadow" alt="Primavera 3"></div>
     </div>
     <div class="falling-flowers"></div>
   </section>
