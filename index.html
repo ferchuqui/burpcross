@@ -36,6 +36,34 @@
   /* filter: brightness(0.9); */ /* ← eliminar */
 }
 
+/* Botón flotante de música */
+.fab-music{
+  position: fixed;
+  right: 18px;           /* movelo si lo querés a la izquierda: left:18px */
+  bottom: px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #d32f2f;   /* rojo BurpCross */
+  color: #fff;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  z-index: 9999;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.fab-music:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.45);
+  background: #b71c1c;
+}
+.fab-music svg{
+  width: 26px; height: 26px;
+  display: block;
+}
+
+
 .coming-soon-overlay {
   position: absolute;
   bottom: 40px;   /* la bajás un poco, ajustá el valor */
@@ -187,6 +215,8 @@
     <div class="falling-flowers"></div>
   </section>
 
+  
+
   <section class="primavera-section">
     <h2 class="primavera-title">🌸 ¡Feliz Día de la Primavera! 🌼</h2>
     <p class="primavera-text">Que la alegría, la energía y las flores llenen cada entrenamiento 🌺💪</p>
@@ -295,5 +325,11 @@
       }
     });
   </script>
+  <a href="musica.html" class="fab-music" aria-label="Ir a mi música de gimnasio" title="Mi música de gimnasio">
+  <!-- Nota musical en SVG (sin dependencias) -->
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 3v10.55A4 4 0 1 1 10 17V8h8V3h-6z"/>
+  </svg>
+</a>
 </body>
 </html>
