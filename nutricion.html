@@ -69,7 +69,10 @@
   <section class="newsletter-section">
     <h2>Suscribite a nuestro Newsletter</h2>
     <p>Recibí consejos de nutrición, recetas saludables y novedades de BurpCross directamente en tu correo.</p>
-    <form action="https://formspree.io/f/mgvzqdrb" method="POST">
+    <form action="https://formspree.io/f/mgvzqdrb" method="POST" target="_blank" onsubmit="setTimeout(()=>{window.location.href='gracias.html';},1000); return true;">
+      <input type="hidden" name="_subject" value="Nueva suscripción al Newsletter BurpCross">
+      <input type="hidden" name="_redirect" value="https://burpcross.com.ar/gracias.html">
+      <input type="hidden" name="_to" value="burpcross@gmail.com">
       <div class="mb-3">
         <label for="name" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="name" name="name" required>
