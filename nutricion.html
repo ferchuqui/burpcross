@@ -26,8 +26,24 @@
     .newsletter-section { background-color: #ffffff; padding: 60px 20px; text-align: center; border-top: 4px solid #d32f2f; }
     .newsletter-section h2 { font-family: 'Anton', sans-serif; color: #d32f2f; margin-bottom: 20px; }
     .newsletter-section form { max-width: 500px; margin: 0 auto; }
-    .newsletter-section .btn-submit { background-color: #d32f2f; color: #fff; text-transform: uppercase; font-family: 'Anton', sans-serif; }
-    .newsletter-section .btn-submit:hover { background-color: #b71c1c; }
+    .newsletter-section .btn-submit {
+      background-color: #ff0000;
+      color: #fff !important;
+      text-transform: uppercase;
+      font-family: 'Anton', sans-serif;
+      border-radius: 10px;
+      padding: 15px 35px;
+      transition: all 0.3s ease;
+      border: none;
+      display: inline-block;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .newsletter-section .btn-submit:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
     footer {
       background: #000;
       color: #fff;
@@ -73,22 +89,7 @@
       <li>🥗 Evitá los ultraprocesados y las bebidas azucaradas.</li>
       <li>🕐 No te saltes comidas: la regularidad es esencial.</li>
     </ul>
-    <h2>Suscribite a nuestro Newsletter</h2>
-    <p>Recibí consejos de nutrición, recetas saludables y novedades de BurpCross directamente en tu correo.</p>
-    <form action="https://formspree.io/f/mgvzqdrb" method="POST" target="_blank" onsubmit="setTimeout(()=>{window.location.href='gracias.html';},1000); return true;">
-      <input type="hidden" name="_subject" value="Nueva suscripción al Newsletter BurpCross">
-      <input type="hidden" name="_redirect" value="https://burpcross.com.ar/gracias.html">
-      <input type="hidden" name="_to" value="burpcross@gmail.com">
-      <div class="mb-3">
-        <label for="name" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" name="_replyto" required>
-      </div>
-      <button type="submit" class="btn btn-submit">Suscribirme</button>
-    </form>
+    
   </section>
 
   <section class="nutrition-tips py-5">
@@ -130,9 +131,28 @@
               <p class="card-text text-secondary">Un buen descanso es esencial para la recuperación muscular y el equilibrio hormonal. Dormí entre 7 y 8 horas diarias.</p>
             </div>
           </div>
+          
         </div>
+        <h2>Suscribite a nuestro Newsletter</h2>
+    <p>Recibí consejos de nutrición, recetas saludables y novedades de BurpCross directamente en tu correo.</p>
+    <form action="https://formspree.io/f/mgvzqdrb" method="POST" target="_blank" onsubmit="setTimeout(()=>{window.location.href='gracias.html';},1000); return true;">
+      <input type="hidden" name="_subject" value="Nueva suscripción al Newsletter BurpCross">
+      <input type="hidden" name="_redirect" value="https://burpcross.com.ar/gracias.html">
+      <input type="hidden" name="_to" value="burpcross@gmail.com">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" name="_replyto" required>
+      </div>
+      <button type="submit" class="btn btn-submit">Suscribirme</button>
+    </form>
       </div>
     </div>
+
+    
   </section>
 
 
