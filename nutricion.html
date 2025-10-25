@@ -28,7 +28,16 @@
     .newsletter-section form { max-width: 500px; margin: 0 auto; }
     .newsletter-section .btn-submit { background-color: #d32f2f; color: #fff; text-transform: uppercase; font-family: 'Anton', sans-serif; }
     .newsletter-section .btn-submit:hover { background-color: #b71c1c; }
-    footer { background: #000; color: #fff; text-align: center; padding: 40px 20px; margin-top: 40px; }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 100px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
     footer a { color: white; margin: 0 10px; font-size: 1.5rem; }
     footer a:hover { color: #d32f2f; }
   </style>
@@ -64,9 +73,6 @@
       <li>🥗 Evitá los ultraprocesados y las bebidas azucaradas.</li>
       <li>🕐 No te saltes comidas: la regularidad es esencial.</li>
     </ul>
-  </section>
-
-  <section class="newsletter-section">
     <h2>Suscribite a nuestro Newsletter</h2>
     <p>Recibí consejos de nutrición, recetas saludables y novedades de BurpCross directamente en tu correo.</p>
     <form action="https://formspree.io/f/mgvzqdrb" method="POST" target="_blank" onsubmit="setTimeout(()=>{window.location.href='gracias.html';},1000); return true;">
@@ -85,6 +91,51 @@
     </form>
   </section>
 
+  <section class="nutrition-tips py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="font-family: 'Anton', sans-serif; color:#d32f2f;">Consejos de Nutrición</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
+            <img src="images/foto3.jpeg" class="card-img-top rounded-top-4" alt="Desayuno saludable">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-danger">Empieza el día con energía</h5>
+              <p class="card-text text-secondary">Un desayuno equilibrado con proteínas, frutas y granos enteros activa tu metabolismo y mejora la concentración durante el día.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
+            <img src="images/foto9.jpeg" class="card-img-top rounded-top-4" alt="Hidratación saludable">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-danger">Hidratate correctamente</h5>
+              <p class="card-text text-secondary">Tomar suficiente agua es esencial para el rendimiento. Evitá bebidas azucaradas y elegí opciones naturales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
+            <img src="images/foto11.jpeg" class="card-img-top rounded-top-4" alt="Comida balanceada">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-danger">Comé con equilibrio</h5>
+              <p class="card-text text-secondary">Prioriza alimentos frescos: vegetales, frutas, proteínas magras y granos. Evitá excesos y disfrutá con moderación.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="card h-100 shadow-sm border-0 rounded-4 hover-card">
+            <img src="images/foto1.jpg" class="card-img-top rounded-top-4" alt="Descanso y recuperación">
+            <div class="card-body">
+              <h5 class="card-title fw-bold text-danger">Descansá lo suficiente</h5>
+              <p class="card-text text-secondary">Un buen descanso es esencial para la recuperación muscular y el equilibrio hormonal. Dormí entre 7 y 8 horas diarias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <footer>
     <h4>Burp⚡Cross</h4>
     <p>Calle Regules 113, Paso del Rey | Tel. +54 9 11 6725-7055</p>
@@ -97,3 +148,33 @@
   </footer>
 </body>
 </html>
+  <!-- Sección moderna e interactiva de Consejos de Nutrición -->
+  
+  <style>
+    .hover-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .hover-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .hover-card img {
+      height: 220px;
+      object-fit: cover;
+    }
+    .hover-card .card-body {
+      flex-grow: 1;
+    }
+    .nutrition-tips {
+      background: linear-gradient(180deg, #fff, #f7f7f7);
+    }
+    .card-title { font-family: 'Anton', sans-serif; }
+    @media (max-width: 768px) {
+      .card-text { font-size: 0.9rem; }
+    }
+  </style>
